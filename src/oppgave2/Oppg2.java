@@ -22,20 +22,20 @@ public class Oppg2 {
 	public static void main(String[] args) {
 		
 		List<Ansatt> ansatteListe = new ArrayList<>();
-		ansatteListe.add(new Ansatt("Per", "Hansen", Kjonn.MANN, "Utvikler", 55000));
-		ansatteListe.add(new Ansatt("Kari", "Olsen", Kjonn.KVINNE, "Lærer", 45000));
-		ansatteListe.add(new Ansatt("Ole", "Larsen", Kjonn.MANN, "Elektriker", 50000));
-		ansatteListe.add(new Ansatt("Kristine", "Johansen", Kjonn.KVINNE, "Butikkansatt", 25000));
-		ansatteListe.add(new Ansatt("Tore", "Berg", Kjonn.MANN, "Ingeniør", 70000));
+		ansatteListe.add(new Ansatt("Per", "Hansen", Kjonn.MANN, "Utvikler", 800000));
+		ansatteListe.add(new Ansatt("Kari", "Olsen", Kjonn.KVINNE, "Lærer", 650000));
+		ansatteListe.add(new Ansatt("Ole", "Larsen", Kjonn.MANN, "Elektriker", 750000));
+		ansatteListe.add(new Ansatt("Kristine", "Johansen", Kjonn.KVINNE, "Butikkansatt", 400000));
+		ansatteListe.add(new Ansatt("Tore", "Berg", Kjonn.MANN, "Ingeniør", 950000));
 		
 		
-		Function<Ansatt, Integer> kroneTillegg = x -> x.getAarslonn() + 5000;
+		Function<Ansatt, Integer> kroneTillegg = x -> x.getAarslonn() + 30000;
 		
 		Function<Ansatt, Integer> prosentTillegg = x -> (int) (x.getAarslonn() * 1.05);
 		
 		Function<Ansatt, Integer> lavLonnTillegg = x -> {
-			if (x.getAarslonn() < 40000) {
-				return x.getAarslonn() + 2000;
+			if (x.getAarslonn() < 500000) {
+				return x.getAarslonn() + 25000;
 			}
 			return x.getAarslonn();
 		};
