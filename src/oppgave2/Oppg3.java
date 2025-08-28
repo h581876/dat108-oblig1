@@ -29,9 +29,9 @@ public class Oppg3 {
 		
 		//a)
 		List<String> etternavnListe = ansatteListe.stream()
-				.map(navn -> navn.getEtternavn())
+				.map(Ansatt::getEtternavn)
 				.toList();
-		System.out.println("Etternavn: " + etternavnListe);
+		etternavnListe.forEach(System.out::println);
 		
 		System.out.println();
 		
