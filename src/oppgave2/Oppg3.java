@@ -11,9 +11,7 @@ public class Oppg3 {
 	
 	
 	private static void skrivUtAlle(List<Ansatt> ansatte) {
-		for (Ansatt a : ansatte) {
-			System.out.println(a);
-		}
+		ansatte.forEach(System.out::println);
 	}
 	
 	public static void main(String[] args) {
@@ -48,7 +46,7 @@ public class Oppg3 {
 				.filter(kjønn -> kjønn.getKjonn() == Kjonn.KVINNE)
 				.mapToInt(lønn -> lønn.getAarslonn())
 				.average()
-				.getAsDouble();
+				.orElse(0);	
 		System.out.println("Snittlønn for kvinner: " + snittLønnKvinner);
 		
 		System.out.println();
@@ -69,7 +67,7 @@ public class Oppg3 {
 		
 		System.out.println();
 		
-		//f også brukt i opp d)
+		//f 
 		ansatteListe.forEach(System.out::println);
 		
 		System.out.println();

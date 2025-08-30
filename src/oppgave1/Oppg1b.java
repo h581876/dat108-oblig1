@@ -19,15 +19,15 @@ public class Oppg1b {
 		
 		int sum = beregn(12, 13, summerFunksjon);
 		
-		System.out.println(sum);
+		System.out.println("Summen er: " + sum);
 		
 		int største = beregn(-5, 3, størsteFunksjon);
 		
-		System.out.println(største);
+		System.out.println("Største tallet er: " + største);
 		
 		int avstand = beregn(54, 45, avstandFunksjon);
 		
-		System.out.println(avstand);
+		System.out.println("Avstanden er: " + avstand);
 		
 	}
 

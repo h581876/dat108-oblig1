@@ -7,16 +7,12 @@ import java.util.function.Function;
 public class Oppg2 {
 	
 	private static void lonnsoppgjor(List<Ansatt> ansatte, Function<Ansatt, Integer> funksjon) {
-		for (Ansatt a : ansatte) {
-			a.setAarslonn(funksjon.apply(a));
-		}
+		ansatte.forEach(a -> a.setAarslonn(funksjon.apply(a)));
 	}
 	
 	
 	private static void skrivUtAlle(List<Ansatt> ansatte) {
-		for (Ansatt a : ansatte) {
-			System.out.println(a);
-		}
+		ansatte.forEach(System.out::println);
 	}
 
 	public static void main(String[] args) {
@@ -47,20 +43,24 @@ public class Oppg2 {
 			return x.getAarslonn();
 		};
 		
+		System.out.println("Liste med kronetillegg: ");
 		lonnsoppgjor(ansatteListe, kroneTillegg);
 		skrivUtAlle(ansatteListe);
 		
 		System.out.println();
+		System.out.println("Liste med prosenttillegg: ");
 		
 		lonnsoppgjor(ansatteListe, prosentTillegg);
 		skrivUtAlle(ansatteListe);
 		
 		System.out.println();
+		System.out.println("Liste med tillegg for lavlønn: ");
 		
 		lonnsoppgjor(ansatteListe, lavLonnTillegg);
 		skrivUtAlle(ansatteListe);
 				
 		System.out.println();
+		System.out.println("Liste med tillegg for menn: ");
 		
 		lonnsoppgjor(ansatteListe, mannTillegg);
 		skrivUtAlle(ansatteListe);

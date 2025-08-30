@@ -10,7 +10,7 @@ public class Oppg1a {
 		
 		List<String> listen = Arrays.asList("10", "1", "20", "110", "21", "12");
 		
-		Collections.sort(listen, (a,b) -> Integer.parseInt(a) - Integer.parseInt(b));
+		listen.sort((a,b) -> Integer.parseInt(a) - Integer.parseInt(b));
 		
 		System.out.println(listen);
 
